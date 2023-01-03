@@ -9,22 +9,36 @@
   --active-color: #ffffff;
   --button-focus: #404bbf;
 }
+h1,
+h2,
+h3,
+h4 h5 h6,
+p ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 .body {
   font-family: Roboto, sans-serif;
   color: var(--text-color);
   background-color: var(--active-color);
+  width: 1440px;
 }
+
 .header {
+  border-bottom: 1px solid var(--accent-color);
 }
 .list {
   list-style: none;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 .nawigation {
+  display: flex;
 }
 .list-web {
-  font-family: "Raleway",sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.3;
@@ -39,6 +53,11 @@
 .nawigation {
 }
 .nawigation-item {
+  display: flex;
+  margin-left: 75px;
+}
+.nawigation-item .nawigation-list:not(:last-child) {
+  margin-right: 40px;
 }
 .nawigation-list {
   font-weight: 600;
@@ -57,6 +76,11 @@
 }
 
 .kontakt {
+  display: flex;
+  margin-left: auto;
+}
+.kontakt .kontakt-list:not(:last-child) {
+  margin-right: 40px;
 }
 .kontakt-list {
 }
@@ -90,6 +114,8 @@
 }
 .hero {
   background: var(--dark-color);
+  text-align: center;
+  margin-bottom: 120px;
 }
 .hero-text {
   font-weight: 600;
@@ -97,26 +123,55 @@
   line-height: 1;
   letter-spacing: 0.02em;
   color: var(--active-color);
+
+  margin-top: 0;
+  margin-bottom: 48px;
+  padding-top: 190px;
 }
 .hero-btn {
   background: var(--primary-brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.04em;
   color: var(--active-color);
   cursor: pointer;
+  min-width: 169px;
+  text-align: center;
+  padding: 16px 32px;
+  margin-bottom: 190px;
 }
 .hero-btn:focus,
 .hero-btn:hover {
   background: var(--button-focus);
 }
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.flexx {
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  align-items: center;
+}
 .section-information {
+  margin-bottom: 120px;
 }
 .info-list {
+  display: flex;
+}
+.forinfoblok:not(:last-child) {
+  margin-right: 24px;
+  
+}
+.galery{
+border: 1px solid var(--accent-color);
 }
 .info-item {
   font-weight: 600;
@@ -124,6 +179,8 @@
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+  margin: 0;
+  padding: 0;
 }
 .info-text {
   font-weight: 400;
@@ -131,9 +188,15 @@
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 .galery-section {
+  margin-bottom: 120px;
+}
+.text-size {
+  font-size: 0;
 }
 .galery-item {
   font-weight: 600;
@@ -142,15 +205,24 @@
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--dark-color);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 70px;
+  padding-top: 120px;
 }
 .galery-list {
+  display: flex;
+  justify-content: center;
 }
 .teamleed-galery {
-background-color: var(--light-color);
+  background-color: var(--light-color);
 }
 
 .team-list {
-    background-color: var(--active-color);
+  background-color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 120px;
 }
 .team-name {
   font-weight: 600;
@@ -159,9 +231,20 @@ background-color: var(--light-color);
   letter-spacing: 0.02em;
   color: var(--dark-color);
 }
-
+.teamimage:not(:last-child) {
+  margin-right: 24px;
+}
+.teamimage{
+background-color: #ffffff;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+border-radius: 0px 0px 4px 4px;
+text-align: center;
+}
 .footer {
   background: var(--dark-color);
+}
+.footer-text {
+  padding-top: 100px;
 }
 .studio-foter {
   color: var(--light-color);
@@ -172,6 +255,10 @@ background-color: var(--light-color);
   /* or 150% */
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  max-width: 264px;
+  margin-top: 16px;
+  margin-bottom: 0;
+  padding-bottom: 100px;
 }
 
 /* ------------------------portfolio css */
@@ -192,19 +279,24 @@ background-color: var(--light-color);
   margin: -1px;
 }
 .filtres-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 95px;
+  margin-bottom: 70px;
 }
-.filtres-link {
+.filtres-link:not(:last-child) {
+  margin-right: 24px;
 }
 .btn-all {
   justify-content: center;
   padding: 8px 16px;
-  width: 69px;
+  min-width: 69px;
   height: 48px;
   background: var(--light-color);
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   /* Button Text */
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -219,7 +311,7 @@ background-color: var(--light-color);
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   /* Button Text */
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -231,13 +323,13 @@ background-color: var(--light-color);
 .btn-web {
   justify-content: center;
   padding: 8px 16px;
-  width: 116px;
+  min-width: 116px;
   height: 48px;
   background: var(--light-color);
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   /* Button Text */
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -253,7 +345,7 @@ background-color: var(--light-color);
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   /* Button Text */
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -265,13 +357,13 @@ background-color: var(--light-color);
 .btn-app {
   justify-content: center;
   padding: 8px 16px;
-  width: 78px;
+  min-width: 78px;
   height: 48px;
   background: var(--light-color);
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   /* Button Text */
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -286,7 +378,7 @@ background-color: var(--light-color);
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   /* Button Text */
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -299,13 +391,13 @@ background-color: var(--light-color);
 .btn-des {
   justify-content: center;
   padding: 8px 16px;
-  width: 101px;
+  min-width: 101px;
   height: 48px;
   background: var(--light-color);
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   /* Button Text */
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -320,7 +412,7 @@ background-color: var(--light-color);
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   /* Button Text */
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -332,13 +424,13 @@ background-color: var(--light-color);
 .btn-mar {
   justify-content: center;
   padding: 8px 16px;
-  width: 126px;
+  min-width: 126px;
   height: 48px;
   background: var(--light-color);
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   /* Button Text */
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -354,7 +446,7 @@ background-color: var(--light-color);
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   /* Button Text */
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -363,10 +455,16 @@ background-color: var(--light-color);
   color: var(--active-color);
   cursor: pointer;
 }
-
 .cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 120px;
+  row-gap: 48px;
+  column-gap: 24px;
+  justify-content: center;
 }
 .list-link {
+  border: 1px solid var(--accent-color);
 }
 .link {
 }
@@ -376,6 +474,9 @@ background-color: var(--light-color);
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+  margin: 0;
+  padding-top: 32px;
+  margin-left: 16px;
 }
 .paragraf-text {
   font-weight: 400;
@@ -383,4 +484,7 @@ background-color: var(--light-color);
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  margin: 0;
+  padding-bottom: 32px;
+  margin-left: 16px;
 }
